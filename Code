@@ -1,0 +1,10 @@
+curl --data "ARCSIGHT_EVENT_NAME=Отркытие крышки&ARCSIGHT_EVENT_ID=12345&ARCSIGHT_DEVICE_VENDOR=SV3&ARCSIGHT_DEVICE_PRODUCT=ksc&ARCSIGHT_DEVICE_HOSTNAME=ksc.corp&ARCSIGHT_DEVICE_IP&OCCUR_DATE=2021-04-31T15:20:33.741Z&DETECTION_DATE=2021-04-31T15:25:33.741Z&HOSTNAME_TARGET=tesl.local&IP_TARGET=&DESCRIPTION=Тестовый инцидент&FILE_HASH=7DD987F846400079F4B03C058365A4869057B4A0&company_id=1&category=ОткрытиеКрышки&typ&token=<API-токен>" https://<адрес IRP сервера >/api/v2/incidents --tlsv1.2
+command.count=1
+command[0].name=TheSendOfIncident
+command[0].displayname=TheSendOfIncident
+command[0].parameter.count=1
+command[0].parameter[0].name=TheSendOfIncident
+command[0].parameter[0].displayname=TheSendOfIncident
+command[0].action=curl --data '"${TheSendOfIncident}&token
+=<API-токен учетной записи>" https://<адрес IRP сервера>
+/api/v2/incidents --tlsv1.2' 
